@@ -110,7 +110,7 @@ module.exports = {
     try {
       //add to feed
       const posts = await Recipe.find().sort({ createdAt: "desc" }).lean();
-      res.render("feed.ejs", { recipe: recipe });
+      res.render("feed.ejs", { recipe: recipes });
     } catch (err) {
       console.log(err);
     }

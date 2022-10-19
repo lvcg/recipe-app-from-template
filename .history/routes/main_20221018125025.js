@@ -9,7 +9,6 @@ const { ensureAuth } = require("../middleware/auth");
 router.get("/", homeController.getIndex);
 router.get("/profile", ensureAuth, recipesController.getProfile);
 router.get("/favorites", ensureAuth, recipesController.getFavorites);
-router.get("/feed", ensureAuth, recipesController.getFeed);
 
 //Routes for user login/signup
 router.get("/login", authController.getLogin);

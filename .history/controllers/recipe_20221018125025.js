@@ -106,13 +106,4 @@ module.exports = {
       res.redirect("/profile");
     }
   },
-  getFeed: async (req, res) => {
-    try {
-      //add to feed
-      const posts = await Recipe.find().sort({ createdAt: "desc" }).lean();
-      res.render("feed.ejs", { recipe: recipe });
-    } catch (err) {
-      console.log(err);
-    }
-  },
 };
